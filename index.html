@@ -3,7 +3,7 @@
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="google-site-verification" content="vZd9xLuKac6DLMZI0tRERzEUzBSdsuEJI1UmOrrJXzA" />
-<title>Histats - Users online &gt; manual</title>
+<title>Histats - Trafik berdasarkan url &gt; manual</title>
 <META name="keywords" content="Counter Histats.com,the free web stats and stat counter, hit counter, free web tracker and tracking tools, stats counter">
 <META name="description" content="Histats.com, free web stats and stat counter, hit counter, free web tracker and tracking tools, stats counter">
 <META http-equiv="pragma" content="nocache">
@@ -25,7 +25,7 @@ var JS_CHECKCH =[];
 
 <link rel="shortcut icon" href="/favicon.ico" />
 
-<link rel="stylesheet" href="//i.histats.com/vigomin/css_min/0272d4ab4a29858a7e436cbf0ee8699a.min.css" type="text/css" >
+<link rel="stylesheet" href="//i.histats.com/vigomin/css_min/44ce390c40307031054e993b19e24399.min.css" type="text/css" >
 <!--[if lte IE 7]>
     <link rel="stylesheet" type="text/css" href="/css/CSS_dropDwn_ie.css" media="screen" />
 <![endif]-->
@@ -190,7 +190,7 @@ var JS_CHECKCH =[];
 
                 </td></tr></table>
                         <br><table border="0" width="100%" cellspacing="10" cellpadding="0" ><tr><td align="center">
-                        <div id="rapidhits-ads" data-selectorval="39">
+                        <div id="rapidhits-ads" data-selectorval="40">
                         <a href="https://makeown.app"  target="_blank"><img src="//i.histats.com/images//ads/websitetoapp.png"  border="0"  alt="Mobile App Builder" ></a>
                         </div>
                 </td></tr></table><br>
@@ -209,18 +209,14 @@ var JS_CHECKCH =[];
 
             </td>
             <td width="10"></td>
-		<td width="760" valign="top" align="center">        <div id="HISTATS_statsmodule_container" > </div>
-        <div id="histats_trafficLive" style="display: none;">
-            <div id="histats_trafficLive_part1" >
-            <br><br>
-                <table border="0" width="150" cellspacing="0" cellpadding="0"><tr>
-                        <td align="center" width="49"><font class="text16_grey"><img border="0" src="//i.histats.com/images/loading1.gif"></font></td><td align="center">
-                        <font class="text16_grey">Loading...</font></td>
-                </tr></table>
-            </div>
-            <div id="histats_trafficLive_part2" ></div>
-            <div id="histats_trafficLive_part3" ></div>
-        </div>            </td>
+		<td width="760" valign="top" align="center">        <div id="HISTATS_statsmodule_container" > </div>        <!--[if IE]>
+                <script type="text/javascript" src="/js1/excanvas_portal.js"></script>
+            <![endif]-->
+        <div id="histats_trafficurl" style="display: none;">
+            <div id="histats_traffic_part1" ></div>
+            <div id="histats_traffic_part2" ></div>
+            <div id="histats_traffic_part3" ></div>
+ </div>            </td>
                </tr></table>
           </div>
 </div>
@@ -233,7 +229,8 @@ var JS_CHECKCH =[];
 <div id="div_LOADINGDIV"  name="div_LOADINGDIV" style="position: absolute; width:300px; height: 200px; z-index: 1000; left: 0px; top: -100px;display='none';filter:alpha(opacity=95);-moz-opacity:.95;opacity:.95;" ></div>
                 
 
-                <script type="text/javascript" src="//i.histats.com/vigomin/js_min/893c38b042fdb6c708633bc521344a44.min.js"></script>
+                <script type="text/javascript" src="//i.histats.com/vigomin/js_min/b2db4364415eeb31da1c08e6a6f9c8fb.min.js"></script><script type="text/javascript" src="//i.histats.com/js1/d3.v3.min.js"></script>
+<script type="text/javascript" src="//i.histats.com/js1/d3-linechart.class.js"></script>
 <script>
 // base
    
@@ -242,18 +239,18 @@ OBJ_SITE =OBJ_SITEs[4785520];
 
 OBJ_SITE.ids = 4785520;
 OBJ_SITE.time_offset = 111600;
-OBJ_SITE.site_time = 1747427268;
+OBJ_SITE.site_time = 1747428411;
 OBJ_SITE.d_subscr = 666;
 OBJ_SITE.timezone_id = 242;
 OBJ_SITE.timezone_str = 'Asia/Jakarta';
-OBJ_SITE.gmt_time = 1747402068;
+OBJ_SITE.gmt_time = 1747403211;
    OBJ_SITE.lht = 1747399106;
    OBJ_SITE.start_h  =	 0;
 //OBJ_SITE.f_build_date(); // build date obj
 //
 
 
-OBJ_SITE.stats_pagetype = 'refsite';
+OBJ_SITE.stats_pagetype = 'traffurl';
 
 //date
             
@@ -274,6 +271,21 @@ AR_SITEINFO_4785520 = json_parse("{\"last_update\":\"1712551654\",\"dateiscr\":\
 </script>
 
 <script>
+OBJ_SITE = OBJ_SITEs[4785520];
+//export vars
+OBJ_SITE.OBJ_traff = new histats_site_traffic_class();
+
+//ptr = OBJ_SITE.OBJ_traff;
+OBJ_SITE.OBJ_traff.ids = 4785520;
+//OBJ_SITE.OBJ_traff.sockURL = '';
+OBJ_SITE.OBJ_traff.tipo_req = 'vu';
+OBJ_SITE.OBJ_traff.sockTOKEN = 'bGmemJoys5ONkz72Zp49mF9TCtJBGyAsnY+PZ7hwAigdGPY8c4vodj77dDGW7DKM+AO3OoPKvH3OsAkzdI21GA==';
+
+    OBJ_SITE.OBJ_traff.trendSTATS = '0';
+OBJ_SITE.user_logged = parseInt('1');
+</script>
+
+<script>
         var nmod = OBJ_STATSsheet.add_module(); // add stats module
 var PTR_MOD = OBJ_STATSsheet.ARmodules[nmod];
 PTR_MOD.ids = 4785520;
@@ -286,20 +298,28 @@ ptrDATE.tTIMEZONE_ID = 242;
 
 ptrDATE._BASE_t_range = 'h';
 ptrDATE._BASE_t_mode = 'normal';
-ptrDATE._BASE_t1 = 1747427268;
+ptrDATE._BASE_t1 = 1747428411;
 ptrDATE._BASE_t2 = 0;
-ptrDATE.HTML_tabSTYLE ='b';
+ptrDATE.GRAPH_UPWARD_RANGE = true ; 
+ptrDATE.AR_DISABLED_range['w'] = 1 ; 
+ptrDATE.AR_DISABLED_range['y'] = 1 ; 
+ptrDATE.AR_DISABLED_range['a'] = 1 ; 
+ptrDATE.AR_DISABLED_range['m'] = 1 ; 
 ptrDATE.build_dateAR();
 ptrDATE.build_html_portions();
 
 // init module div
-PTR_MOD.HTML_DIV_TEMPLATE_COPYCAT = 'histats_trafficLive';
+PTR_MOD.HTML_DIV_TEMPLATE_COPYCAT = 'histats_trafficurl';
 PTR_MOD.PRINT_MAIN();
 PTR_MOD.f_print_HTMLDIV_copycat();
-PTR_MOD.f_print_LIVE();
+G_LOAD.f_set_ALL_OPEN(3,'downloading data...');
+OBJ_SITE.hourly_stats[1747353601] = new histats_site_dailystats_class(1747353601);
+var daily_ptr =OBJ_SITE.hourly_stats[1747353601] ;  
+daily_ptr._init_from_JSON("{\"id_s\":\"4785520\",\"ids\":0,\"UNIXTIME\":1747353601,\"UNIXTIME_last\":0,\"range\":\"h\",\"AR_segments\":[],\"AR_TOTALS\":{\"h\":10,\"v\":4,\"nv\":4,\"aa\":0,\"bb\":0,\"tb\":2,\"ub\":4},\"AR_freq\":[],\"AR_additionals\":[]}");
+daily_ptr.UNIXTIME =  1747353601 ;
 
-G_LIVEcalls.sockTOKEN = 'bGmemJoys5ONkz72Zp49mF9TCtJBGyAsnY+PZ7hwAigdGPY8c4vodj77dDGW7DKM+AO3OoPKvH3OsAkzdI21GA==';
-    G_LIVEcalls.user_logged = 1;
+
+PTR_MOD.f_print_TRAFFIC();
 
 </script>
 
@@ -351,8 +371,8 @@ G_LIVEcalls.sockTOKEN = 'bGmemJoys5ONkz72Zp49mF9TCtJBGyAsnY+PZ7hwAigdGPY8c4vodj7
 <script>if(!Histats_variables){var Histats_variables=[];}</script>
          <script>
         if(!Histats_variables){var Histats_variables=[];}
-                        Histats_variables.push("site_section","traffic_live");
-Histats_variables.push("tags","statsPage; traffic_live");
+                        Histats_variables.push("site_section","traffic_byurl");
+Histats_variables.push("tags","statsPage; traffic_byurl");
 
         </script>
 <script type="text/javascript">var _Hasync= _Hasync|| [];
@@ -422,7 +442,7 @@ if(isInIframe){
 </script>
 <script>
 
-__GMT_TIME = 1747402068;
+__GMT_TIME = 1747403211;
 $(document).ready(function() {
     G_LOAD.f_CLOSE(1);
     $.fn.tipsy.defaults = {
